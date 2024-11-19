@@ -51,12 +51,46 @@
         </div>
     </nav>
 
-
-
     <!-- Main Content Wrapper -->
     <div class="content-wrapper container">
         <h1 class="my-4">Pressure Readings</h1>
         <p class="lead">This page displays pressure reading entries</p>
+
+        <!-- Table for Pressure Readings -->
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Sample Number</th>
+                        <th>Fruit Type</th>
+                        <th>Reading 1</th>
+                        <th>Reading 2</th>
+                        <th>Capture Date</th>
+                        <th>Sample Status</th>
+                        <th>Capture Station</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for reading in pressure_readings %}
+                    <tr>
+                        <td>{{ reading.id }}</td>
+                        <td>{{ reading.sample_number }}</td>
+                        <td>{{ reading.fruit_type }}</td>
+                        <td>{{ reading.reading_1 }}</td>
+                        <td>{{ reading.reading_2 }}</td>
+                        <td>{{ reading.capture_date }}</td>
+                        <td>{{ reading.sample_status }}</td>
+                        <td>{{ reading.capture_station }}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Generate QR Code</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- Footer -->

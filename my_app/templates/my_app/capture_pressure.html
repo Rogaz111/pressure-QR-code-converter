@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Pressure Capture</title>
     <style>
@@ -51,18 +50,72 @@
         </div>
     </nav>
 
-    <!-- Main Content Wrapper -->
-    <div class="content-wrapper container">
-        <h1 class="my-4">Import CSV or JSON Data</h1>
+    <!-- Messages Section with Dismiss Button -->
+    <div class="container mt-3">
+        {% if messages %}
+            <div>
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
     </div>
 
+    <!-- Form Section -->
     <div class="content-wrapper container">
-        Placeholder for Uploaded Data
-    </div>
+        <h1 class="mt-4 mb-4">Pressure Reading Capture Form</h1>
+        <form method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="sample_number" class="form-label">Sample Number:</label>
+                <input type="text" id="sample_number" name="sample_number" class="form-control" required>
+            </div>
 
-    <div class="content-wrapper container">
-        <label class="form-label" for="customFile">Default file input example</label>
-        <input type="file" class="form-control" id="customFile" />
+            <div class="mb-3">
+                <label for="fruit_type" class="form-label">Fruit Type:</label>
+                <select id="fruit_type" name="fruit_type" class="form-select" required>
+                    <option value="" disabled selected>Select Fruit Type</option>
+                    <option value="apple">Apple</option>
+                    <option value="pear">Pear</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="reading_1" class="form-label">Reading 1:</label>
+                <input type="number" step="0.01" id="reading_1" name="reading_1" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="reading_2" class="form-label">Reading 2:</label>
+                <input type="number" step="0.01" id="reading_2" name="reading_2" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="capture_date" class="form-label">Capture Date:</label>
+                <input type="datetime-local" id="capture_date" name="capture_date" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="sample_status" class="form-label">Sample Status:</label>
+                <select id="sample_status" name="sample_status" class="form-select" required>
+                    <option value="" disabled selected>Select Sample Status</option>
+                    <option value="I">I</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="Z">Z</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="capture_station" class="form-label">Capture Station:</label>
+                <input type="text" id="capture_station" name="capture_station" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 
     <!-- Footer -->
