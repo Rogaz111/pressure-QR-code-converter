@@ -47,7 +47,6 @@ The above is the required structure for running the appplication.
 **OnRun():**
 - On launch of the application you should land on the home route i.e the Home Page.
 - You should see information text on the Hoome Page and a Nav Bar with options to navigate Home, Capturing Pressure and Importing pressure data.
-  ![image](https://github.com/user-attachments/assets/76adb97c-1434-4cbc-94d8-0719b4748c16)
 - No Table Data will be displayed as pressure uploads or creation are required before displaying the data.
 
 **Navigation():**
@@ -62,6 +61,14 @@ The above is the required structure for running the appplication.
   - Complete the fields, note, the Capture Date has a calendar widget and should display the calendar when selecting the date.
   - On successful submission a dismissable flash meesage should indicate the upload/creation was successful.
   - Navigate back to the Home Page, the uploaded record should display in the table, grouped by Sample Number.
+  
+- **Home**
+  ![image](https://github.com/user-attachments/assets/76adb97c-1434-4cbc-94d8-0719b4748c16)
+
+  - The Home Page will display the created record in a table format. All the captured form fields should display in a row and grouped by the sample number.
+  - Adding multiple records with the same Sample Number should be displayed grouped as mentioned above.
+  - The QR Code Column shoudl by default display 'No QR COde Generated'.
+  - If the Generate QR button is clicked it should show an alert indicating successful geenration and reload instruction and after reload display the generated QR code.
 
     
   
