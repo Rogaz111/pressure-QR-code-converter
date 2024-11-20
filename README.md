@@ -67,11 +67,15 @@ The above is the required structure for running the appplication.
 
   - The Home Page will display the created record in a table format. All the captured form fields should display in a row and grouped by the sample number.
   - Adding multiple records with the same Sample Number should be displayed grouped as mentioned above.
-  - The QR Code Column shoudl by default display 'No QR COde Generated'.
+  - The QR Code Column should by default display 'No QR COde Generated'.
   - If the Generate QR button is clicked it should show an alert indicating successful geenration and reload instruction and after reload display the generated QR code.
+  - This can then be scanned and the data should acccurately display what has been captured in the respective row.
 
-    
-  
+- **Imports**
+  ![image](https://github.com/user-attachments/assets/c7357ba0-7c34-4f0d-a00a-7c2db0e12096)
 
-
-
+  -  The imports page, on load should display a File Type selection field and an upload field to upload the desired file.
+  -  Two types have been accomodated for i.e CSV and XLSX. The respective selected file type should be uploaded.
+  -  The format assumes the file to be as per the data directory .csv and .xlsx files respectively.
+  -  After successful upload a dismissible flash message should indicate the upload was successful.
+  -  Navigate to the Home page and validate the data has uploaded and displaying correctly. 
