@@ -10,3 +10,4 @@ class PressureReading(models.Model):
     capture_date = models.DateTimeField()
     sample_status = models.CharField(max_length=1,choices=[('I', 'I'), ('R', 'R'), ('S', 'S'), ('Z', 'Z')])
     capture_station = models.CharField(max_length=225)
+    qr_code_data = models.CharField(max_length=500, blank=True, null=True)
