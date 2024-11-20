@@ -13,6 +13,23 @@
             margin: 0;  /* Remove default body margin */
         }
 
+        .navbar-nav {
+            flex-direction: row; /* Arrange items horizontally */
+        }
+
+        .nav-item {
+            margin: 0 15px; /* Add spacing between nav items */
+        }
+
+        /* Hover effect */
+        .nav-hover:hover {
+            color: #f8f9fa; /* Light color on hover */
+            background-color: #495057; /* Darker background */
+            border-radius: 5px; /* Rounded corners */
+            padding: 5px 10px; /* Padding for hover effect */
+        }
+
+
         /* Use flexbox for the main layout */
         body {
             display: flex;
@@ -33,18 +50,18 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/home">Home</a>
+                        <a class="nav-link nav-hover" href="/home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/capture_pressure">Capture Pressures</a>
+                        <a class="nav-link nav-hover" href="/capture_pressure">Capture Pressures</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/import_view">Imports</a>
+                        <a class="nav-link nav-hover" href="/import_view">Imports</a>
                     </li>
                 </ul>
             </div>
