@@ -2,7 +2,7 @@ from datetime import datetime
 from django.test import TestCase
 from django.urls import reverse
 from django.utils.timezone import make_aware
-from my_app.models import PressureReading
+from src.my_app.models import PressureReading
 
 
 # Creating two test cases to demonstrate Unit Testing ability

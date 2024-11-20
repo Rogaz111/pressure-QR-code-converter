@@ -9,8 +9,8 @@ from django.core.files.storage import FileSystemStorage
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from my_app.forms import PressureReadingForm
-from my_app.models import PressureReading
+from src.my_app.forms import PressureReadingForm
+from src.my_app.models import PressureReading
 
 
 # Home Page Route

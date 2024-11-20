@@ -2,8 +2,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from my_app import views
-from my_app.views import generate_qr_code
+from src.my_app import views
+from src.my_app.views import generate_qr_code
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Default admin site URL
