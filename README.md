@@ -78,4 +78,22 @@ The above is the required structure for running the appplication.
   -  Two types have been accomodated for i.e CSV and XLSX. The respective selected file type should be uploaded.
   -  The format assumes the file to be as per the data directory .csv and .xlsx files respectively.
   -  After successful upload a dismissible flash message should indicate the upload was successful.
-  -  Navigate to the Home page and validate the data has uploaded and displaying correctly. 
+  -  Navigate to the Home page and validate the data has uploaded and displaying correctly.
+
+**General Experience and Feedback Developing Program:**
+  - The general build of the project was very challenging. The biggest part was interpreting the Delphi pascal code.
+  - I installed RAD Studio to try and depict what components were used in the GUI and what field data were being captured.
+  - The Capture Form depicts what I gather from it, I also saw that there were some connection which seemed like a hardware device.
+  - I added the grouping of a sample view as I saw that a Sample can have mutiple readings.
+  - I tried to keep the code simple and clean as much as I could.
+  - It was very time consuming as I had to learn the Django framework in the last day and build the application accordingly.
+  - I did pick up it was some what different to Flask but I could get up to speed quick as there were pattern elements that were the same but just done differently in Django.
+  - I added Two Unit test in the app as well to demonstrate my ability to work with Unit Tests in applications, see tests.py file.
+  - I picked up that were components used in the delphi program that involves a timer, spinbox and logger, I could not depict what it does so did not include it in my project
+    as I thought best to leave it out then to deliver incorrect solution.
+  - The status captures I also saw it was set per operation of the reading process and updated on each method execution, my project tries to simulate it by manually entering it, assuming the      individual capturing the data is the Middle/Hardware Interface processing and inputting the data.
+  - The data storage I could pick up as well, in my project its demonstrated by adding the data to the database on capture.
+  - The generation of QR Code is demonstrated in my project via the in line row QR generation for ease of use and better user experience. Was not sure however if the QR Code needed to be 
+    downloadable or jsut scannable and I kept it at scan.
+  - I trust the project I delivered meets the required needs and showcases my ability. 
+
