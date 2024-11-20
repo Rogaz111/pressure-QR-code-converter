@@ -173,7 +173,6 @@
                 button.addEventListener('click', function () {
                     // Get the row data from the button's data-row-data attribute
                     const rowData = this.getAttribute('data-row-data');
-                    console.log(rowData);
 
                     // Parse the row data into an object (assuming it's JSON-like)
                     const rowObject = {};
@@ -182,7 +181,6 @@
                         rowObject[key] = value;
                     });
 
-                    console.log(JSON.stringify(rowObject));
 
                     // Send POST request with the row object
                     $.ajax({
@@ -194,16 +192,13 @@
                             'X-CSRFToken': getCookie('csrftoken') // Include CSRF token
                         },
                         success: function (response) {
-                        console.log('Response:', response); // Debugging: Print the full response
                         if (response.qr_code_url) {
                             alert('QR Code generated successfully! Reload the page to view the QR.');
-                            console.log('QR Code URL:', response.qr_code_url);
                         } else {
                             alert('Failed to generate QR Code.');
                             }
                         },
                         error: function (xhr) {
-                            console.error('Error:', xhr.responseText);
                             alert(`Error: ${xhr.responseText}`);
                                 }
                             });

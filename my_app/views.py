@@ -21,7 +21,6 @@ def home(request):
     context_data = {
         'pressure_readings': pressure_reading,
     }
-    print(pressure_reading.values())
     return render(request, "my_app/home.html", context=context_data)
 
 

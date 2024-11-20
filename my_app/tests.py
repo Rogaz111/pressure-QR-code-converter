@@ -11,10 +11,8 @@ from my_app.models import PressureReading
 class PressureReadingModelTest(TestCase):
     def setUp(self):
         # Sample PressureReading instance
-
         # Test gave warning for non-timezone-aware object passed for the below value for capture_date
         # capture_date="2024-03-15 08:30:00"
-
         # Added the below wrapper to address the warning
         capture_date = make_aware(datetime(2024, 3, 15, 8, 30))
 
@@ -42,11 +40,7 @@ class ImportViewTest(TestCase):
     def test_import_view_page_loads(self):
         # Send a GET request to the import_view
         response = self.client.get(reverse('imports'))
-        print(response.status_code)
-        print(response)
-
         # Assert that the response returns a 200 OK status
         self.assertEqual(response.status_code, 200, "The import_view page did not load successfully.")
-
         # Assert that the correct template is used
         self.assertTemplateUsed(response, 'my_app/imports.html', "The import_view did not render the correct template.")
