@@ -12,7 +12,19 @@ The application requirements are as follows:
 - Django and Python environment needs to be properly setup.
 - Requirements.txt file needs to run and all libraries installed.
 - Preferably ran in a Chrome window browser.
+  
+_**---21/11/2024---
 
+** Note from Rayn:
+  I noticed this morning the clone will give some errors when trying to run the project, reason for this i moved the folders to the scr folder i tried to create at the end but like mentioned 
+  below it broke the program. The below will resolve the issues:**_
+
+  - Python interpreter : 3.10
+  - Imports are pointing to 'src.' this should be removed and only reference 'my_app'.
+  - Changes requried:
+    -  example => 'from src.my_app import' solution => 'src.' should be removed as the directory is deleted
+  - I can push the amendments as well, if required, to the files.
+      
 **Project Structure:**
 root/
   - data/
