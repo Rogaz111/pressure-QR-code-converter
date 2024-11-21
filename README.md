@@ -2,7 +2,7 @@
 
 **Overview:**
 
-The application is made up of three screens and 4 routes. The main ouput of this application allows Employees to LOAD pressure readings, View presuure readings, Upload preassure readings and 
+The application is made up of three screens and 4 routes. The main ouput of this application allows Employees to LOAD pressure readings, View pressure readings, Upload pressure readings and 
 Generate QR codes containing the pressure data.
 
 **Requirements:**
